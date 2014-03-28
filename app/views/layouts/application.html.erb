@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= full_title(yield(:title)) %></title>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <%= render 'layouts/shim' %> 
+
+    <!-- -->
+    <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>   
+    <link href='http://fonts.googleapis.com/css?family=Homenaje' rel='stylesheet' type='text/css'>
+    <%= javascript_include_tag :application %>
+
+  </head>
+  <body>
+
+
+<div style="width:100%; float:left;">
+
+
+  <!-- Top -->
+  <div style="
+  display: table;
+  position: absolute;
+  height: 70px;
+  width: 100%;
+  ">
+
+    <div style="
+    display: table-cell;
+    vertical-align: middle;">
+
+      <div style="margin-left: auto;
+      margin-right: auto; 
+      width: 792px;
+      background: #ff3399;">
+
+           <p style="float:left; color:white; font-size: 24px;"> Lorem Ipsum</p>
+           <p style="float: right; <a href="/about">Ab</a>  |  <a href="/resume">Re</a>  |  <a href="/po">Po</a>  |  Co</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<div style="width:100%; float:left; margin-top: 74px; ">
+
+  <div style="
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url('http://d1j7jzxaaoictu.cloudfront.net/assets/background-8e9e4041456d63dbe0bf8473b1d0f3ac.jpg');
+    ">
+
+    <div style="
+      display: table-cell;
+      vertical-align: top;">
+
+      <div style="
+        margin-left: auto;
+        margin-right: auto; 
+        width: 792px;
+        background-image: url('http://d1j7jzxaaoictu.cloudfront.net/assets/background-8e9e4041456d63dbe0bf8473b1d0f3ac.jpg');
+        ">
+  
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+      <%= debug(params) if Rails.env.development? %>
+
+  </div>
+
+</div>
+
+</div>
+</div>
+
+
+
+
+  </body>
+</html>
